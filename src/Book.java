@@ -4,14 +4,13 @@ public class Book {
     int publicationYear;
 
 
-
-    public Book (String bookName,Author author,int publicationYear){
-        this.author=author;
-        this.bookName=bookName;
-        this.publicationYear=publicationYear;
+    public Book(String bookName, Author author, int publicationYear) {
+        this.author = author;
+        this.bookName = bookName;
+        this.publicationYear = publicationYear;
     }
 
-    public String getBookName(){
+    public String getBookName() {
         return this.bookName;
 
     }
@@ -25,23 +24,26 @@ public class Book {
     }
 
     public void setPublicationYear(int newYear) {
-        this.publicationYear = newYear;}
+        this.publicationYear = newYear;
+    }
 
     @Override
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) {
         Book ob = (Book) obj;
         if (this == obj) return true;
-        else if (this.bookName == ob.getBookName() && (this.author == ob.getAuthor())&& this.publicationYear == ob.getPublicationYear())
+        else if (this.bookName == ob.getBookName() && (this.author == ob.getAuthor()) && this.publicationYear == ob.getPublicationYear())
             return true;
         else
             return false;
     }
+
     @Override
     public int hashCode() {
         return this.bookName.hashCode() + this.author.hashCode();
     }
+
     @Override
     public String toString() {
-        return "Имя Книги "+ this.bookName + "Автор "+ this.author;
+        return "Имя Книги " + this.bookName + "Автор " + this.author;
     }
 }

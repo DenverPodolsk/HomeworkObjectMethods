@@ -18,6 +18,7 @@ public class Main {
         System.out.println(book2);
         System.out.println(book2.hashCode());
 
+
         System.out.println(book1.equals(book2));
 
         System.out.println("Имя книги "+ book1.getBookName() + "Имя автора "+ book1.getAuthor().getName()+ "Фамилия автора "+book1.getAuthor().getSurname()+ "Год публикации "+book1.getPublicationYear());
